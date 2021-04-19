@@ -1,5 +1,5 @@
 #setting up selenium using pip3 and installing google chrome 
-sudo apt install unzip
+sudo apt install unzip python3-pip
 pip3 install selenium
 sudo apt update
 CURR=$(pwd)
