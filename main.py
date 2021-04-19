@@ -6,7 +6,7 @@ driver = webdriver.Chrome()
 
 # going to the webpage
 driver.get("https://lms.sssihl.edu.in/login/index.php")
-time.sleep(5)
+time.sleep(1)
 
 # finding the textboxes by element id
 username = driver.find_element_by_id("username")
@@ -22,14 +22,17 @@ password.send_keys(password_name)
 
 # finding and clicking the login button
 loginbtn = driver.find_element_by_id("loginbtn")
-time.sleep(5)
+time.sleep(1)
 loginbtn.click()
 
 # going to the attendance page
-driver.get("https://lms.sssihl.edu.in/mod/attendance/view.php?id=1513")
-time.sleep(5)
+try:
+    xpath = driver.find_element_by_xpath("//button[@class='btn nav-link float-sm-left mr-1 btn-secondary']")
+    xpath.click()
+except:
+    print('Menu Button not found')
+xpath = driver.find_element_by_xpath("//a[@data-key='400']")
+xpath.click()
+xpath = driver.find_element_by_xpath("/html/body/div[1]/div[3]/div/div/section[1]/div/div/ul/li[1]/div[3]/ul/li[5]/div/div/div[2]/div/a")
+xpath.click()
 
-# Using Xpath
-#xpath = //*[contains(@text,'Submit')]
-# new_var = driver.find_element_by_xpath(//*[@href= 'https://lms.sssihl.edu.in/mod/attendance/'])
-#xpath.click()
