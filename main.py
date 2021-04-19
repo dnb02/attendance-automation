@@ -30,6 +30,6 @@ driver.get("https://lms.sssihl.edu.in/mod/attendance/view.php?id=1513")
 time.sleep(5)
 
 # Using Xpath
-xpath = //*[contains(@text,'Submit')]
+#xpath = //*[contains(@text,'Submit')]
 # new_var = driver.find_element_by_xpath(//*[@href= 'https://lms.sssihl.edu.in/mod/attendance/'])
-xpath.click()
+#xpath.click()
