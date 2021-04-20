@@ -29,10 +29,7 @@ loginbtn.click()
 try:
     xpath = driver.find_element_by_xpath("//button[@class='btn nav-link float-sm-left mr-1 btn-secondary']")
     xpath.click()
-except:
-    print('Menu Button not found')
 xpath = driver.find_element_by_xpath("//a[@data-key='400']")
 xpath.click()
 xpath = driver.find_element_by_xpath("/html/body/div[1]/div[3]/div/div/section[1]/div/div/ul/li[1]/div[3]/ul/li[5]/div/div/div[2]/div/a")
 xpath.click()
-
